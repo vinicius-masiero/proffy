@@ -63,4 +63,4 @@ $ yarn install
 # Run application
 $ yarn start
 ```
-After, read the QRCode with the [expo](https://play.google.com/store/apps/details?id=host.exp.exponent) app, or run using an emulator.
+After, read the QRCode using the [expo](https://play.google.com/store/apps/details?id=host.exp.exponent) app or run using an emulator.
