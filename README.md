@@ -1,5 +1,5 @@
 <p align="center">
-   <img src="https://github.com/RafaelGoulartB/Proffy/blob/master/.github/logo.png" alt="Proffy" width="280"/>
+   <img src="https://github.com/vinicius-masiero/proffy/blob/master/.github/logo.png" alt="Proffy" width="280"/>
 </p>
 
 # :computer: Technologies
