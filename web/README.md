@@ -10,20 +10,39 @@ This project was made using the following technologies:
 <ul>
   <li><a href="https://www.typescriptlang.org/">Typescript</a></li>
   <li><a href="https://reactjs.org/">ReactJS</a></li>
+  <li><a href="https://nodejs.org/en/">NodeJS</a></li>
+  <li><a href="https://expressjs.com/">ExpressJS</a></li>
 </ul>
 
-## Install dependencies
-
-_yarn_
-
+# :construction_worker: How to run
 ```bash
-$ yarn install
+# Clone Repository
+$ git clone https://github.com/vinicius-masiero/Proffy.git
 ```
-
-## Start application
-
-_yarn_
+### 📦 Run API
 
 ```bash
+# Go to server folder
+$ cd Proffy/server
+
+# Install Dependencies
+$ yarn install
+
+# Run Aplication
 $ yarn start
 ```
+Access API at http://localhost:3333/
+
+### 💻 Run Web Project
+
+```bash
+# Go to web folder
+$ cd Proffy/web
+
+# Install Dependencies
+$ yarn install
+
+# Run Aplication
+$ yarn start
+```
+Open the project at http://localhost:3000/
