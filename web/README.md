@@ -25,10 +25,10 @@ $ git clone https://github.com/vinicius-masiero/Proffy.git
 # Go to server folder
 $ cd Proffy/server
 
-# Install Dependencies
+# Install dependencies
 $ yarn install
 
-# Run Aplication
+# Run application
 $ yarn start
 ```
 Access API at http://localhost:3333/
@@ -39,10 +39,10 @@ Access API at http://localhost:3333/
 # Go to web folder
 $ cd Proffy/web
 
-# Install Dependencies
+# Install dependencies
 $ yarn install
 
-# Run Aplication
+# Run application
 $ yarn start
 ```
 Open the project at http://localhost:3000/
