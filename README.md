@@ -3,7 +3,7 @@
 </p>
 
 # :computer: Technologies
-This project was made using the follow technologies:
+This project was made using the following technologies:
 <ul>
   <li><a href="https://www.typescriptlang.org/">Typescript</a></li>
   <li><a href="https://reactjs.org/">ReactJS</a></li>
