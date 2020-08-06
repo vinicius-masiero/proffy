@@ -6,9 +6,11 @@
 This project was made using the follow technologies:
 <ul>
   <li><a href="https://www.typescriptlang.org/">Typescript</a></li>
+  <li><a href="https://reactjs.org/">ReactJS</a></li>
   <li><a href="https://reactnative.dev/">React Native</a></li>
   <li><a href="https://expo.io/">Expo</a></li>
-  <li><a href="https://expressjs.com/en/api.html#express">Express</a></li>
+  <li><a href="https://nodejs.org/en/">NodeJS</a></li>
+  <li><a href="https://expressjs.com/">ExpressJS</a></li>
 </ul>
 
 # :construction_worker: How to run
