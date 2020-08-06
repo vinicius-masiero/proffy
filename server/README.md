@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://github.com/vinicius-masiero/proffy/blob/master/.github/logo.png" alt="Proffy" width="280"/>
+<img src="https://github.com/vinicius-masiero/Proffy/blob/master/.github/logo.png" alt="Proffy" width="280"/>
 
 ### _**Server**_
 </div>
@@ -16,7 +16,7 @@ This project was made using the following technologies:
 # :construction_worker: How to run
 ```bash
 # Clone Repository
-$ git clone https://github.com/vinicius-masiero/proffy.git
+$ git clone https://github.com/vinicius-masiero/Proffy.git
 ```
 ### 📦 Run API
 
