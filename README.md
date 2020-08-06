@@ -2,7 +2,6 @@
 
 <img src="https://github.com/vinicius-masiero/proffy/blob/master/.github/logo.png" alt="Proffy" width="280"/>
 
-### _**WEB** Version_
 </div>
 
 # :computer: Technologies
