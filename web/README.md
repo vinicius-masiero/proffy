@@ -1,8 +1,8 @@
 <div align="center">
 
-# ![Proffy](https://camo.githubusercontent.com/74c8681f6d4521903b63e79173a72f0b849243be/68747470733a2f2f692e696d6775722e636f6d2f73356c546465502e706e67)
+<img src="https://github.com/vinicius-masiero/proffy/blob/master/.github/logo.png" alt="Proffy" width="280"/>
 
-### _Versão **WEB**_
+### _**WEB** Version_
 </div>
 
 # :computer: Technologies
@@ -12,7 +12,7 @@ This project was made using the following technologies:
   <li><a href="https://reactjs.org/">ReactJS</a></li>
 </ul>
 
-## Instalar dependencias
+## Install dependencies
 
 _yarn_
 
@@ -20,7 +20,7 @@ _yarn_
 $ yarn install
 ```
 
-## Iniciar aplicação
+## Start application
 
 _yarn_
 
