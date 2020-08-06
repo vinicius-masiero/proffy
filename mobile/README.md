@@ -27,10 +27,10 @@ $ git clone https://github.com/vinicius-masiero/Proffy.git
 # Go to server folder
 $ cd Proffy/server
 
-# Install Dependencies
+# Install dependencies
 $ yarn install
 
-# Run Aplication
+# Run application
 $ yarn start
 ```
 Access API at http://localhost:3333/
@@ -44,10 +44,10 @@ After, fork this repository and clone to your machine. Inside of the project's f
 # Go to mobile folder
 $ cd Proffy/mobile
 
-# Install Dependencies
+# Install dependencies
 $ yarn install
 
-# Run Aplication
+# Run application
 $ yarn start
 ```
-After, read the QRCode with the [expo](https://play.google.com/store/apps/details?id=host.exp.exponent) app, or run using an emulator.
+After, read the QRCode using the [expo](https://play.google.com/store/apps/details?id=host.exp.exponent) app or run using an emulator.
