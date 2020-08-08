@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, ScrollView, Text, TextInput } from 'react-native';
 import { BorderlessButton, RectButton } from 'react-native-gesture-handler';
 import { Feather } from '@expo/vector-icons';
@@ -32,8 +32,14 @@ function TeacherList() {
     });
   }
 
+  async function getAllClasses() {
+    const response = await api.get('classes/getAll');
+    setTeachers(response.data);
+  }
+
   useFocusEffect(
     React.useCallback(() => {
+      getAllClasses();
       loadFavorites();
     }, [])
   );
