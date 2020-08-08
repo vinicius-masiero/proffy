@@ -1,4 +1,4 @@
-import React, { useState, FormEvent } from 'react';
+import React, { useState, FormEvent, useEffect } from 'react';
 
 import PageHeader from '../../components/PageHeader';
 import TeacherItem, { Teacher } from '../../components/TeacherItem';
@@ -26,6 +26,15 @@ function TeacherList() {
     });
     setTeachers(response.data);
   }
+
+  async function getAllTeachers() {
+    const response = await api.get('classes/getAll');
+    setTeachers(response.data);
+  }
+
+  useEffect(() => {
+    getAllTeachers();
+  }, []);
 
   return (
     <div id="page-teacher-list" className="container">
