@@ -32,14 +32,14 @@ function TeacherList() {
     });
   }
 
-  async function getAllClasses() {
-    const response = await api.get('classes/getAll');
+  async function getAllTeachers() {
+    const response = await api.get('classes');
     setTeachers(response.data);
   }
 
   useFocusEffect(
     React.useCallback(() => {
-      getAllClasses();
+      getAllTeachers();
       loadFavorites();
     }, [])
   );
@@ -98,15 +98,18 @@ function TeacherList() {
           paddingBottom: 16
         }}
       >
-        {teachers.map((teacher: Teacher) => {
-          return (
-            <TeacherItem
-              key={teacher.id}
-              teacher={teacher}
-              favorited={favorites.includes(teacher.id)}
-            />
-          );
-        })}
+        {!teachers.length
+        ? <Text style={styles.notFound}>Nenhum Proffy encontrado.</Text>
+        : teachers.map((teacher: Teacher) => {
+            return (
+              <TeacherItem
+                key={teacher.id}
+                teacher={teacher}
+                favorited={favorites.includes(teacher.id)}
+              />
+            );
+          })
+        }
       </ScrollView>
     </View>
   );

@@ -43,6 +43,11 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontFamily: 'Archivo_700Bold',
     fontSize: 16,
+  },
+  notFound: {
+    marginTop: 60,
+    fontFamily: 'Archivo_700Bold',
+    textAlign: 'center'
   }
 });
 
