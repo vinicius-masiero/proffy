@@ -28,7 +28,7 @@ function TeacherList() {
   }
 
   async function getAllTeachers() {
-    const response = await api.get('classes/getAll');
+    const response = await api.get('classes');
     setTeachers(response.data);
   }
 
@@ -80,9 +80,12 @@ function TeacherList() {
       </PageHeader>
 
       <main>
-        {teachers.map((teacher: Teacher) => {
-          return <TeacherItem key={teacher.id} teacher={teacher} />;
-        })}
+        {!teachers.length 
+          ? <p>Nenhum Proffy encontrado.</p>
+          : teachers.map((teacher: Teacher) => {
+            return <TeacherItem key={teacher.id} teacher={teacher} />;
+          })
+        }
       </main>
     </div>
   )
