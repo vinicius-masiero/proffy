@@ -13,38 +13,32 @@ export default class ClassesController {
   async index(request: Request, response: Response) {
     const filters = request.query;
 
-    const subject = filters.subject as string;
     const week_day = filters.week_day as string;
+    const subject = filters.subject as string;
     const time = filters.time as string;
 
-    if (!filters.week_day || !filters.subject || !filters.time) {
-      return response.status(400).json({
-        error: 'Missing filters to search classes.'
-      });
+    const query = db('classes as c')
+      .whereExists(query =>
+        query
+          .select('*')
+          .from('class_schedule as cs')
+          .whereRaw('"cs"."class_id" = "c"."id"')
+          .modify(query => {
+            if (filters.week_day) {
+              query.whereRaw('week_day = ?', week_day);
+            }
+            if (filters.time) {
+              const timeInMinutes = time.length ? convertHourToMinutes(time) : 0;
+              query.whereRaw('"from" <= ?', timeInMinutes).whereRaw('"to" > ?', timeInMinutes);
+            }
+          })
+      )
+      .select(['c.*', 'u.*'])
+      .join('users as u', { 'c.user_id': 'u.id' });
+    if (filters.subject) {
+      query.where({ subject });
     }
-
-    const timeInMinutes = convertHourToMinutes(time);
-
-    const classes = await db('classes')
-      .whereExists(function() {
-        this.select('class_schedule.*')
-          .from('class_schedule')
-          .whereRaw('`class_schedule`.`class_id` = `classes`.`id`')
-          .whereRaw('`class_schedule`.`week_day` = ??', [Number(week_day)])
-          .whereRaw('`class_schedule`.`from` <= ??', [timeInMinutes])
-          .whereRaw('`class_schedule`.`to` > ??', [timeInMinutes])
-      })
-      .where('classes.subject', '=', subject)
-      .join('users', 'classes.user_id', '=', 'users.id')
-      .select(['classes.*', 'users.*']);
-
-    return response.json(classes);
-  }
-
-  async getAll(request: Request, response: Response) {
-    const classes = await db('classes')
-      .join('users', 'classes.user_id', '=', 'users.id')
-      .select(['classes.*', 'users.*']);
+    const classes = await query;
 
     return response.json(classes);
   }
